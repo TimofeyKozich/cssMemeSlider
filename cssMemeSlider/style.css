@@ -23,6 +23,31 @@ body {
   background-color: grey;
 }
 
+.image-wraper {
+  display: flex;
+  flex-basis: 100%;
+  order: -1;
+
+  width: 100%;
+  height: 80%;
+
+  overflow: hidden;
+}
+
+.img {
+  flex-shrink: 1;
+  
+  width: 100%;
+  height: 100%;
+}
+
+.mem-img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 1rem;
+}
+
 label {
   display: none;
   order: 0;
@@ -36,29 +61,6 @@ label {
   font-size: 1.5rem;
 }
 
-.image-wraper {
-  flex-basis: 100%;
-  order: -1;
-
-  width: 100%;
-  height: 80%;
-
-  text-align: center;
-}
-
-.img {
-  display: none;
-
-  width: 100%;
-  height: 100%;
-}
-
-.mem-img {
-  width: 100%;
-  height: 100%;
-
-  border-radius: 1rem;
-}
 
 input {
   order: 1;
@@ -73,37 +75,78 @@ input:hover {
   cursor: pointer;
 }
 
+/* =================== Slide 1 =================== */
+
+#slide1:checked ~ .image-wraper > .img1 {
+  flex-shrink: 0;
+  transition: 1s;
+}
+
+#slide1:not(:checked) ~ .image-wraper > .img1 {
+  flex-shrink: 1;
+  transition: 1s;
+}
+
 #slide1:checked ~ label[for="slide1"] {
   display: block;
 }
-#slide1:checked ~ .image-wraper > .img1 {
-  display: block;
+/* =================== Slide 2 =================== */
+
+#slide2:checked ~ .image-wraper > .img2 {
+  flex-shrink: 0;
+  transition: 1s;
+}
+
+#slide2:not(:checked) ~ .image-wraper > .img2 {
+  flex-shrink: 1;
+  transition: 1s;
 }
 
 #slide2:checked ~ label[for="slide2"] {
   display: block;
 }
-#slide2:checked ~ .image-wraper > .img2 {
-  display: block;
+/* =================== Slide 3 =================== */
+
+#slide3:checked ~ .image-wraper > .img3 {
+  flex-shrink: 0;
+  transition: 1s;
+}
+
+#slide3:not(:checked) ~ .image-wraper > .img3 {
+  flex-shrink: 1;
+  transition: 1s;
 }
 
 #slide3:checked ~ label[for="slide3"] {
   display: block;
 }
-#slide3:checked ~ .image-wraper > .img3 {
-  display: block;
+/* =================== Slide 4 =================== */
+
+#slide4:checked ~ .image-wraper > .img4 {
+  flex-shrink: 0;
+  transition: 1s;
+}
+
+#slide4:not(:checked) ~ .image-wraper > .img4 {
+  flex-shrink: 1;
+  transition: 1s;
 }
 
 #slide4:checked ~ label[for="slide4"] {
   display: block;
 }
-#slide4:checked ~ .image-wraper > .img4 {
-  display: block;
+/* =================== Slide 5 =================== */
+
+#slide5:checked ~ .image-wraper > .img5 {
+  flex-shrink: 0;
+  transition: 1s;
+}
+
+#slide5:not(:checked) ~ .image-wraper > .img5 {
+  flex-shrink: 1;
+  transition: 1s;
 }
 
 #slide5:checked ~ label[for="slide5"] {
-  display: block;
-}
-#slide5:checked ~ .image-wraper > .img5 {
   display: block;
 }
