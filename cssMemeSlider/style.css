@@ -14,11 +14,10 @@ body {
 
 .wraper {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
 
   padding: 1rem;
 
@@ -56,10 +55,10 @@ body {
 .label-wraper {
   display: flex;
   flex-direction: column;
-  flex-basis: 80%;
+  flex-basis: calc(100% - 10 * 2rem);
   order: 0;
 
-  height: 10%;
+  height: 15%;
 
   margin-top: 1rem;
 
@@ -79,17 +78,77 @@ body {
   overflow: hidden;
 }
 
+/* =============== Input Styles ============== */
+
 input {
   order: 1;
 
-  height: 1rem;
-  width: 1rem;
+  height: 2rem;
+  width: 2rem;
 
-  margin-top: 1rem;
+  margin: 1rem 0 0;
+
+  opacity: 0;
+  transform: translate(500%);
+
+  cursor: pointer;
 }
 
-input:hover {
-  cursor: pointer;
+.custom-input__wraper {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 2rem;
+  height: 2rem;
+
+  margin: 1rem 0 0;
+}
+
+.custom-input {
+  width: 1rem;
+  height: 1rem;
+  
+  border-radius: 50%;
+
+  background-color: royalblue;
+}
+
+#slide1:checked ~ .custom-input__wraper > .custom-input1,
+#slide2:checked ~ .custom-input__wraper > .custom-input2,
+#slide3:checked ~ .custom-input__wraper > .custom-input3,
+#slide4:checked ~ .custom-input__wraper > .custom-input4,
+#slide5:checked ~ .custom-input__wraper > .custom-input5 {
+  border: 0.2rem solid royalblue;
+  background-color: inherit;
+}
+
+#slide1:hover ~ .custom-input__wraper > .custom-input1,
+#slide2:hover ~ .custom-input__wraper > .custom-input2,
+#slide3:hover ~ .custom-input__wraper > .custom-input3,
+#slide4:hover ~ .custom-input__wraper > .custom-input4,
+#slide5:hover ~ .custom-input__wraper > .custom-input5 {
+  border: 0.2rem solid royalblue;
+  background-color: white;
+}
+
+#slide1:checked:hover ~ .custom-input__wraper > .custom-input1,
+#slide2:checked:hover ~ .custom-input__wraper > .custom-input2,
+#slide3:checked:hover ~ .custom-input__wraper > .custom-input3,
+#slide4:checked:hover ~ .custom-input__wraper > .custom-input4,
+#slide5:checked:hover ~ .custom-input__wraper > .custom-input5 {
+  border-color: white;
+  background-color: inherit;
+}
+
+#slide1:not(:checked):hover ~ .custom-input__wraper > .custom-input1,
+#slide2:not(:checked):hover ~ .custom-input__wraper > .custom-input2,
+#slide3:not(:checked):hover ~ .custom-input__wraper > .custom-input3,
+#slide4:not(:checked):hover ~ .custom-input__wraper > .custom-input4,
+#slide5:not(:checked):hover ~ .custom-input__wraper > .custom-input5 {
+  border-color: white;
+  background-color: white;
 }
 
 /* ============= Animation / Transition ===================== */
