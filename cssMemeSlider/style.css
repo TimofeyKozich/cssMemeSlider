@@ -1,3 +1,5 @@
+/* =============== Common Styles ============== */
+
 * {
   box-sizing: border-box;
 }
@@ -23,13 +25,14 @@ body {
   background-color: grey;
 }
 
+/* =============== Image Styles ============== */
+
 .image-wraper {
   display: flex;
   flex-basis: 100%;
   order: -1;
 
-  width: 100%;
-  height: 80%;
+  height: 85%;
 
   overflow: hidden;
 }
@@ -48,19 +51,33 @@ body {
   border-radius: 1rem;
 }
 
-label {
-  display: none;
+/* =============== Label for image Styles ============== */
+
+.label-wraper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
   order: 0;
 
-  width: 80%;
-  height: 20%;
+  height: 10%;
 
-  padding: 1rem;
+  margin-top: 1rem;
 
   color: white;
   font-size: 1.5rem;
+
+  overflow: hidden;
 }
 
+.label {
+  flex-shrink: 1;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+}
 
 input {
   order: 1;
@@ -75,6 +92,8 @@ input:hover {
   cursor: pointer;
 }
 
+/* ============= Animation / Transition ===================== */
+
 /* =================== Slide 1 =================== */
 
 #slide1:checked ~ .image-wraper > .img1 {
@@ -87,8 +106,16 @@ input:hover {
   transition: 1s;
 }
 
-#slide1:checked ~ label[for="slide1"] {
-  display: block;
+#slide1:checked ~ .label-wraper > label[for="slide1"] {
+  flex-shrink: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+#slide1:not(:checked) ~ .label-wraper > label[for="slide1"] {
+  flex-shrink: 1;
+  opacity: 0;
+  transition: 1s;
 }
 /* =================== Slide 2 =================== */
 
@@ -102,8 +129,16 @@ input:hover {
   transition: 1s;
 }
 
-#slide2:checked ~ label[for="slide2"] {
-  display: block;
+#slide2:checked ~ .label-wraper > label[for="slide2"] {
+  flex-shrink: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+#slide2:not(:checked) ~ .label-wraper > label[for="slide2"] {
+  flex-shrink: 1;
+  opacity: 0;
+  transition: 1s;
 }
 /* =================== Slide 3 =================== */
 
@@ -117,8 +152,16 @@ input:hover {
   transition: 1s;
 }
 
-#slide3:checked ~ label[for="slide3"] {
-  display: block;
+#slide3:checked ~ .label-wraper > label[for="slide3"] {
+  flex-shrink: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+#slide3:not(:checked) ~ .label-wraper > label[for="slide3"] {
+  flex-shrink: 1;
+  opacity: 0;
+  transition: 1s;
 }
 /* =================== Slide 4 =================== */
 
@@ -132,8 +175,16 @@ input:hover {
   transition: 1s;
 }
 
-#slide4:checked ~ label[for="slide4"] {
-  display: block;
+#slide4:checked ~ .label-wraper > label[for="slide4"] {
+  flex-shrink: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+#slide4:not(:checked) ~ .label-wraper > label[for="slide4"] {
+  flex-shrink: 1;
+  opacity: 0;
+  transition: 1s;
 }
 /* =================== Slide 5 =================== */
 
@@ -147,6 +198,14 @@ input:hover {
   transition: 1s;
 }
 
-#slide5:checked ~ label[for="slide5"] {
-  display: block;
+#slide5:checked ~ .label-wraper > label[for="slide5"] {
+  flex-shrink: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+#slide5:not(:checked) ~ .label-wraper > label[for="slide5"] {
+  flex-shrink: 1;
+  opacity: 0;
+  transition: 1s;
 }
