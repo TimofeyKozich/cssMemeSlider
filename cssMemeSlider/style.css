@@ -75,7 +75,7 @@ body {
 
   width: 100%;
   height: 100%;
-  opacity: 0;
+
   overflow: hidden;
 }
 
@@ -96,116 +96,70 @@ input:hover {
 
 /* =================== Slide 1 =================== */
 
-#slide1:checked ~ .image-wraper > .img1 {
-  flex-shrink: 0;
-  transition: 1s;
-}
-
-#slide1:not(:checked) ~ .image-wraper > .img1 {
-  flex-shrink: 1;
-  transition: 1s;
-}
-
+#slide1:checked ~ .image-wraper > .img1,
 #slide1:checked ~ .label-wraper > label[for="slide1"] {
   flex-shrink: 0;
-  opacity: 1;
   transition: 1s;
 }
 
+#slide1:not(:checked) ~ .image-wraper > .img1,
 #slide1:not(:checked) ~ .label-wraper > label[for="slide1"] {
   flex-shrink: 1;
-  opacity: 0;
   transition: 1s;
 }
+
 /* =================== Slide 2 =================== */
 
-#slide2:checked ~ .image-wraper > .img2 {
-  flex-shrink: 0;
-  transition: 1s;
-}
-
-#slide2:not(:checked) ~ .image-wraper > .img2 {
-  flex-shrink: 1;
-  transition: 1s;
-}
-
+#slide2:checked ~ .image-wraper > .img2,
 #slide2:checked ~ .label-wraper > label[for="slide2"] {
   flex-shrink: 0;
-  opacity: 1;
   transition: 1s;
 }
 
+#slide2:not(:checked) ~ .image-wraper > .img2,
 #slide2:not(:checked) ~ .label-wraper > label[for="slide2"] {
   flex-shrink: 1;
-  opacity: 0;
   transition: 1s;
 }
+
 /* =================== Slide 3 =================== */
 
-#slide3:checked ~ .image-wraper > .img3 {
-  flex-shrink: 0;
-  transition: 1s;
-}
-
-#slide3:not(:checked) ~ .image-wraper > .img3 {
-  flex-shrink: 1;
-  transition: 1s;
-}
-
+#slide3:checked ~ .image-wraper > .img3,
 #slide3:checked ~ .label-wraper > label[for="slide3"] {
   flex-shrink: 0;
-  opacity: 1;
   transition: 1s;
 }
 
+#slide3:not(:checked) ~ .image-wraper > .img3,
 #slide3:not(:checked) ~ .label-wraper > label[for="slide3"] {
   flex-shrink: 1;
-  opacity: 0;
   transition: 1s;
 }
+
 /* =================== Slide 4 =================== */
 
-#slide4:checked ~ .image-wraper > .img4 {
-  flex-shrink: 0;
-  transition: 1s;
-}
-
-#slide4:not(:checked) ~ .image-wraper > .img4 {
-  flex-shrink: 1;
-  transition: 1s;
-}
-
+#slide4:checked ~ .image-wraper > .img4,
 #slide4:checked ~ .label-wraper > label[for="slide4"] {
   flex-shrink: 0;
-  opacity: 1;
   transition: 1s;
 }
 
+#slide4:not(:checked) ~ .image-wraper > .img4,
 #slide4:not(:checked) ~ .label-wraper > label[for="slide4"] {
   flex-shrink: 1;
-  opacity: 0;
   transition: 1s;
 }
+
 /* =================== Slide 5 =================== */
 
-#slide5:checked ~ .image-wraper > .img5 {
-  flex-shrink: 0;
-  transition: 1s;
-}
-
-#slide5:not(:checked) ~ .image-wraper > .img5 {
-  flex-shrink: 1;
-  transition: 1s;
-}
-
+#slide5:checked ~ .image-wraper > .img5,
 #slide5:checked ~ .label-wraper > label[for="slide5"] {
   flex-shrink: 0;
-  opacity: 1;
   transition: 1s;
 }
 
+#slide5:not(:checked) ~ .image-wraper > .img5,
 #slide5:not(:checked) ~ .label-wraper > label[for="slide5"] {
   flex-shrink: 1;
-  opacity: 0;
   transition: 1s;
 }
