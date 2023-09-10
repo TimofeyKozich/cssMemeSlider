@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.wraper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 50%;
+  height: 50%;
+
+  padding: 1rem;
+
+  background-color: grey;
+}
+
+label {
+  display: none;
+  order: 0;
+
+  width: 80%;
+  height: 20%;
+
+  padding: 1rem;
+
+  color: white;
+  font-size: 1.5rem;
+}
+
+.image-wraper {
+  flex-basis: 100%;
+  order: -1;
+
+  width: 100%;
+  height: 80%;
+
+  text-align: center;
+}
+
+.img {
+  display: none;
+
+  width: 100%;
+  height: 100%;
+}
+
+.mem-img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 1rem;
+}
+
+input {
+  order: 1;
+
+  height: 1rem;
+  width: 1rem;
+
+  margin-top: 1rem;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+#slide1:checked ~ label[for="slide1"] {
+  display: block;
+}
+#slide1:checked ~ .image-wraper > .img1 {
+  display: block;
+}
+
+#slide2:checked ~ label[for="slide2"] {
+  display: block;
+}
+#slide2:checked ~ .image-wraper > .img2 {
+  display: block;
+}
+
+#slide3:checked ~ label[for="slide3"] {
+  display: block;
+}
+#slide3:checked ~ .image-wraper > .img3 {
+  display: block;
+}
+
+#slide4:checked ~ label[for="slide4"] {
+  display: block;
+}
+#slide4:checked ~ .image-wraper > .img4 {
+  display: block;
+}
+
+#slide5:checked ~ label[for="slide5"] {
+  display: block;
+}
+#slide5:checked ~ .image-wraper > .img5 {
+  display: block;
+}
